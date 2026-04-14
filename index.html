@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students CRUD Operations</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="container">
+        <div class="headings">
+          <h3>Students CRUD Demo (Fetch + async/await)</h3>
+          <p>Simulated students data built from a public API response</p>
+        </div>
+        <div class="actionArea">
+          <span class="tag">GET /users (mapped to Students)</span>
+          <button class="reload">Reload</button>
+        </div>
+      </header>
+      <div class="container previewArea">
+        <div class="headerArea">
+          <div class="logArea">
+            <h4>Students</h4>
+            <p class="studentsCount">0 shown</p>
+          </div>
+          <div class="inputArea">
+            <input
+              type="text"
+              class="searchInput"
+              placeholder="Search name or email..."
+            />
+          </div>
+        </div>
+        <div class="studentsList"></div>
+      </div>
+      <div class="container" style="--align: start;">
+        <h3>Add New Student</h3>
+        <p>
+          Sends a POST request (demo). Student is added to local list so CRUD
+          feels real.
+        </p>
+        <div class="studentData">
+          <div class="inputField">
+            <p>Fullname</p>
+            <input
+              type="text"
+              class="studentName"
+              placeholder="e.g. abdullah mosa"
+            />
+          </div>
+          <div class="inputField">
+            <p>Email</p>
+            <input
+              type="text"
+              class="studentEmail"
+              placeholder="e.g. abod@gmail.com"
+            />
+          </div>
+          <div class="inputField">
+            <p>Major</p>
+            <select name="Major" class="majorList">
+              <option value="1">Computer Science</option>
+              <option value="2">Software Engineering</option>
+              <option value="3" selected>Information Systems</option>
+              <option value="4">Cybersecurity</option>
+              <option value="5">Data Science</option>
+            </select>
+          </div>
+          <div class="inputField">
+            <p>GPA (0.0 – 4.0)</p>
+            <input
+              type="number"
+              class="studentGPA"
+              value="3"
+              max="4"
+              min="0"
+              step="0.1"
+            />
+          </div>
+        </div>
+        <div class="studentsActionBtns">
+          <button class="clear">clear</button>
+          <button class="create accept">Create (POST)</button>
+        </div>
+        <p>
+          Tip: In real APIs, students would be stored in your backend database.
+        </p>
+      </div>
+    </div>
+
+    <div class="overlay">
+      <div class="container" style="--align: end;">
+        <h3>Edit Student</h3>
+        <p class="sid">Editing student id:</p>
+        <div class="studentData">
+          <div class="inputField">
+            <p>Fullname</p>
+            <input
+              type="text"
+              class="studentName"
+              placeholder="e.g. abdullah mosa"
+            />
+          </div>
+          <div class="inputField">
+            <p>Email</p>
+            <input
+              type="text"
+              class="studentEmail"
+              placeholder="e.g. abod@gmail.com"
+            />
+          </div>
+          <div class="inputField">
+            <p>Major</p>
+            <select name="Major" class="majorList">
+              <option value="1">Computer Siense</option>
+              <option value="2">Software Engineering</option>
+              <option value="3" selected>Information Systems</option>
+              <option value="4">Cybersecurity</option>
+              <option value="5">Data Siense</option>
+            </select>
+          </div>
+          <div class="inputField">
+            <p>GPA (0.0 – 4.0)</p>
+            <input
+              type="number"
+              class="studentGPA"
+              value="3"
+              max="4"
+              min="0"
+              step="0.1"
+            />
+          </div>
+        </div>
+        <div class="studentsActionBtns">
+          <button class="cancel">cancel</button>
+          <button class="update accept">Update (PUT)</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
